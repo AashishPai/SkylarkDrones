@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>MONGOLS</title>
+	<link href="https://fonts.googleapis.com/css?family=Ewert&amp;subset=latin-ext" rel="stylesheet">
+
+	<link href="https://fonts.googleapis.com/css?family=Open+Sans:600" rel="stylesheet">
+
+	<link rel="stylesheet" href="index.css">
+      <!--Import Google Icon Font-->
+      <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+      <!--Import materialize.css-->
+      <link type="text/css" rel="stylesheet" href="css/materialize.min.css"  media="screen,projection"/>
+
+      <!--Let browser know website is optimized for mobile-->
+      <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+
+
+
+      <!--Load the AJAX API-->
+    <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+    <script type="text/javascript">
+
+      google.charts.load('current', {packages: ['corechart', 'line']});
+google.charts.setOnLoadCallback(drawBasic);
+
+function drawBasic() {
+
+      var data = new google.visualization.DataTable();
+      data.addColumn('number', 'Year');
+      data.addColumn('number', 'Growth Rate');
+
+      data.addRows([
+        [0, 0],[1125, 10], [1206, 30], [1227 , 25], [1239,20], [1241, 9], [1251,30], [1259, 9], [1294, 2]
+      ]);
+
+      var options = {
+      	
+        hAxis: {
+          title: 'Year'
+        },
+        vAxis: {
+          title: 'Growth and Power'
+        }
+      };
+
+      var chart = new google.visualization.LineChart(document.getElementById('chart_div'));
+
+      chart.draw(data, options);
+    }
+  
+    	 google.charts.load('current', {
+        'packages':['geochart'],
+        // Note: you will need to get a mapsApiKey for your project.
+        // See: https://developers.google.com/chart/interactive/docs/basic_load_libs#load-settings
+        'mapsApiKey': 'AIzaSyD-9tSrke72PouQMnMX-a7eZSW0jkFMBWY'
+      });
+      google.charts.setOnLoadCallback(drawRegionsMap);
+
+      function drawRegionsMap() {
+        var data = google.visualization.arrayToDataTable([
+          ['Country', 'Popularity'],
+          ['Russia', 200],
+          ['Iran', 300],
+          ['Iraq', 400],
+          ['Kazakhstan', 500],
+          ['Moscow', 600],
+          ['Morocco', 700],
+          ['Mongolia',1000],
+          ['Chnia',800]
+        ]);
+
+        var options = {};
+
+        var chart = new google.visualization.GeoChart(document.getElementById('regions_div'));
+
+        chart.draw(data, options);
+      }
+    </script>
+
+      <style type="text/css">
+      	#t1{
+      		font-family: 'Ewert', cursive;
+      	}
+      </style>
+
+      <style type="text/css">
+      	#t2{
+      		font-family: 'Open Sans', sans-serif;
+      	}
+      </style>
+
+      <style type="text/css">
+      	#t3{
+      		align-content: left;
+      	}
+      </style>
+
+</head>
+<body>
+
+   <div id="t1" class="row">
+
+      <div class="col s12 center " id="pai"><p><h1>THE MONGOLS</h1></p></div>
+      <div class="col s12 center " id="tagline"><h5>This article is about the ethnic group.</h5></div>
+  </div>
+
+  	<div id="t2" class="row">
+  	<div class="col s6 center ">
+      <div class="col s12 m12">
+    <h2 class="header"></h2>
+    <div class="card horizontal">
+      <div class="card-stacked">
+        <div class="card-content">
+          <img class="materialboxed" width="650" src="images/m2.jpg">
+        </div>
+        
+      </div>
+    </div>
+  </div>
+                
+      </div>
+       <div class="col s6 center ">
+        <div class="col s12 m12">
+        	
+   			 
+   			 <p title="Definition">
+   			 <p id="t2"><u><h4>Defintion</h4></u></p>
+    			Broadly defined, the term includes the Mongols proper (also known as the Khalkha Mongols), Buryats, Oirats, the Kalmyk people and the Southern Mongols. The latter comprises the Abaga Mongols, Abaganar, Aohans, Baarins, Gorlos Mongols, Jalaids, Jaruud, Khishigten, Khuuchid, Muumyangan and Onnigud.
+    		</p>
+    		<p title="Definition">
+				The designation "Mongol" briefly appeared in 8th century records of Tang China to describe a tribe of Shiwei. It resurfaced in the late 11th century during the Khitan-ruled Liao dynasty. After the fall of the Liao in 1125, the Khamag Mongols became a leading tribe on the Mongolian Plateau. However, their wars with the Jurchen-ruled Jin dynasty and the Tatar confederation had weakened them.
+			</p>
+			<p title="Definition">
+				In the thirteenth century, the word Mongol grew into an umbrella term for a large group of Mongolic-speaking tribes united under the rule of Genghis Khan.
+			</p>	
+
+  		</div>
+      </div>
+
+      </div>
+
+
+
+<div class="row">
+    <div class="col s12 center ">
+      <div class="col s12 m12">
+    	<h2 id="t1" class="header">Rise and Fall Of the Mongol Empire</h2>
+    		<div class="card horizontal">
+     	 	<div class="card-stacked">
+        	<div class="card-content">
+         		 <!--Div that will hold the pie chart-->
+   				 <div id="chart_div"></div>
+       	    </div>
+            </div>
+    		</div>
+  	  </div>
+    </div>
+</div>
+
+
+
+<div class="row"  >
+     <div class="col s12 center ">
+      <div class="col s12 m12">
+    	<h2 id="t1" class="header">Expansion Of Mongol Empire (1125-1300)</h2>
+    		<div class="card horizontal">
+     	 	<div class="card-stacked">
+        	<div class="card-content">
+         		 <!--Div that will hold the geo chart-->
+   				  <div id="regions_div" style="width: 1000px; height: 500px;"></div>
+       	    </div>
+            </div>
+    		</div>
+  	  </div>
+    </div>
+</div>
+
+     
+  <footer id="t2" class="page-footer blue-grey darken-3">
+          <div class="container">
+            <div class="row">
+              <div class="col l6 s12">
+                <h5 class="white-text">Learn more @WIKI</h5>
+                <h6><p class="grey-text text-lighten-4">Information referred from Wikipedia.</p></h6>
+              </div>
+              <div class="col l4 center offset-l2 s12">
+                <h5 class="white-text">Charts obtained from Google Charts using JSFiddle, to get started with JSFidlle click the link below!!</h5>
+                <ul>
+
+                  <li>
+                  <a class="btn waves-effect waves-light #546e7a blue-grey darken-1" 
+                     target="_blank" href="https://developers.google.com/chart/interactive/docs/quick_start">Get Your Charts here!!!
+                  </a>
+                  </li>
+<div class="divider" ></div>
+                  
+                  <li>
+                    <a class="btn waves-effect waves-light #546e7a blue-grey darken-1" href="index.html">
+                      Home
+                    </a>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+          <div class="footer-copyright">
+            <div class="container">
+            © 2014 Copyright Text
+            <a class="grey-text text-lighten-4 right" href="#!">Thank You! Visit again.</a>
+            </div>
+          </div>
+        </footer>
+      
+      
+  <!--Import jQuery before materialize.js-->
+       
+
+        <script type="text/javascript" src="js/jquery.min.js"> </script>
+
+        <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
+
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+
+        <script type="text/javascript" src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
+
+        <script src="http://code.jquery.com/jquery-1.9.1.js"></script>
+
+
+        <script type="text/javascript" src="js/materialize.min.js"></script>
+
+</body>
+</html>
